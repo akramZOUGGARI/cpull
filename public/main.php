@@ -46,18 +46,57 @@ $allquiz = $wpdb->get_results($allquizsql);
 			</div>	
 
 			<!-- Modal -->
-			  <div class="modal fade" id="myModal" role="dialog">
-			    <div class="modal-dialog modal-sm">
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  				<div class="modal-dialog" >
 			      <div class="modal-content">
 			        <div class="modal-header">
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			          <h4 class="modal-title">Modal Header</h4>
+			          <h4 class="modal-title">How many stars is your car worth?.</h4>
 			        </div>
-			        <div class="modal-body">
-			          <p>This is a small modal.</p>
+			        <div class="modal-body" id="comfort">			          
+			          
+			          <select class="selectpicker">
+			          	 
+			          	  <option selected="selected" hidden > Comfort :</option>
+						  <option>5</option>
+						  <option>4</option>
+						  <option>3</option>
+						  <option>2</option>
+						  <option>1</option>						
+					  </select>
+					  
+			          <select class="selectpicker" id="performance" >
+			              <option selected="selected" hidden > Performance :</option>
+						  <option>5</option>
+						  <option>4</option>
+						  <option>3</option>
+						  <option>2</option>
+						  <option>1</option>
+					  </select>
+					 
+			          <select class="selectpicker" id="Interior_design">
+			          	  <option selected="selected" hidden > Interior design :</option>
+						  <option>5</option>
+						  <option>4</option>
+						  <option>3</option>
+						  <option>2</option>
+						  <option>1</option>
+					  </select>
+
+			          <select class="selectpicker" id="Exterior_styling">
+			          	<option selected="selected" hidden > Exterior styling :</option>
+						  <option>5</option>
+						  <option>4</option>
+						  <option>3</option>
+						  <option>2</option>
+						  <option>1</option>
+					  </select>
+					 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+
 			        </div>
 			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
 			        </div>
 			      </div>
 			    </div>
