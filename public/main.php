@@ -15,24 +15,31 @@ $allquiz = $wpdb->get_results($allquizsql);
              <h2>Last</h2> 
              <div class="container">            
 			    <?php foreach( $allquiz as $quiz ) { ?> 
-			    <div class="row">
-			    	<div class="col-md-7 offset-md-7">
-				    <div  class="alert alert-warning"   role="alert">
-				        <h4 class="alert-heading"><a href="#" class="alert-link"><?php echo $quiz->title;?></a></h4>
-				        
-				        <p><?php echo $quiz->content;?></p>
-				   
-				    </div>
-				    </div>
-				    <div class="col-md-4 offset-md-4">
-				    	<div  class="alert alert-info"   role="alert">
-				    	<?php for ($i=0; $i < $quiz->overall; $i++) echo '<i class="fa fa-star" aria-hidden="true"></i>';
-				    	      for ($i=0; $i < 5-$quiz->overall; $i++) echo '<i class="fa fa-star-o" aria-hidden="true"></i>';?>  
-				    	
+			 
+			   
+			    		<div class="row">
+				    	<div class="col-md-7 offset-md-7">
+					    <div  class="alert alert-warning"   role="alert">
+					        <h4 class="alert-heading"><a href="#" class="alert-link"><?php echo $quiz->title;?></a></h4>      
+					        <p><?php echo $quiz->content;?></p>
+					   
+					    </div>
+					    </div>
+					    </div>
+					    <div class="row">
+				        <div class="col-md-7 offset-md-7">
+				    	<div  class="alert alert-success"   role="alert">
+				    	Note :
+				    	<?php  echo $quiz->overall."/5 ";
+				    	      for ($i=0; $i < $quiz->overall; $i++) echo '<i class="fa fa-star" aria-hidden="true"></i> ';
+				    	      for ($i=0; $i < 5-$quiz->overall; $i++) echo '<i class="fa fa-star-o" aria-hidden="true"></i> ';?>  
+				    	<button type="button" class="btn btn-warning">How many stars is your car worth? </button>
+				    	<button type="button" class="btn btn-warning">Write your review</button>
 				    	</div>
-				    </div>
-			    </div>
-                <hr>
+				        </div>
+				        </div>
+				    
+			    
 			    <?php }?>  
 			</div>
  	
