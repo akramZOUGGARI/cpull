@@ -71,5 +71,10 @@ function cpull_all_quiz(){
 
         include('admin/allquiz.php');
 }
-
 add_action('admin_menu', 'cpull_setup_menu');
+
+
+function front_main() {
+  include('public/main.php');
+}
+add_shortcode('grand_titre', 'front_main');

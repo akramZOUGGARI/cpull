@@ -39,7 +39,3 @@ $allquiz = $wpdb->get_results($allquizsql);
  	
  
 <?php 
-//echo $all_quiz;
-//echo json_encode( $output );
-
-
